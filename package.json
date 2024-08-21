@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-framework",
+  "version": "1.0.0",
+  "description": "Simple nodejs framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MyroslavShymon/NodeJs-Framework.git"
+  },
+  "keywords": [
+    "Framework",
+    "NodeJs"
+  ],
+  "author": "Myroslav Shymkiv <myroslavshymon@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MyroslavShymon/NodeJs-Framework/issues"
+  },
+  "homepage": "https://github.com/MyroslavShymon/NodeJs-Framework#readme",
+  "dependencies": {
+    "object-hash": "^3.0.0",
+    "reflect-metadata": "^0.2.2",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/object-hash": "^3.0.6"
+  }
+}
