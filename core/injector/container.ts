@@ -1,6 +1,6 @@
-import { Module } from "./module";
+import {Module} from "./module";
 import {ModuleTokenFactory} from "./module-token-factory";
-// import { AbstractHttpAdapter } from "../adapters";
+import {AbstractHttpAdapter} from "../../adapters";
 
 export class Container {
     private readonly modules = new Map<string, Module>();

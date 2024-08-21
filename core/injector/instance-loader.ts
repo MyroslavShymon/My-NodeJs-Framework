@@ -1,11 +1,12 @@
-import { Container } from "./container";
-import { Injector } from "./injector";
-import { Module } from "./module";
+import {Container} from "./container";
+import {Injector} from "./injector";
+import {Module} from "./module";
 
 export class InstanceLoader {
     private readonly injector = new Injector();
 
-    constructor(private readonly container: Container) {}
+    constructor(private readonly container: Container) {
+    }
 
     public async createInstancesOfDependencies() {
         const modules = this.container.getModules();
@@ -23,7 +24,7 @@ export class InstanceLoader {
     }
 
     private async createInstancesOfProviders(module: Module) {
-        const { providers } = module;
+        const {providers} = module;
         const wrappers = [...providers.values()];
         await Promise.all(
             wrappers.map(item => this.injector.loadProvider(item, module)),
@@ -31,7 +32,7 @@ export class InstanceLoader {
     }
 
     private async createInstancesOfControllers(module: Module) {
-        const { controllers } = module;
+        const {controllers} = module;
         const wrappers = [...controllers.values()];
         await Promise.all(
             wrappers.map(item => this.injector.loadControllers(item, module)),

@@ -1,16 +1,25 @@
-import { InstanceWrapper } from "./instance-wrapper";
-import { randomStringGenerator } from "../../common";
+import {InstanceWrapper} from "./instance-wrapper";
+import {randomStringGenerator} from "../../common";
 
 export class Module {
     private readonly _imports = new Set<Module>();
     private readonly _providers = new Map<any, InstanceWrapper>();
     private readonly _controllers = new Map<string, InstanceWrapper>();
 
-    private _token: string | undefined;
-
     constructor(
         private readonly module: any,
-    ) {}
+    ) {
+    }
+
+    private _token: string | undefined;
+
+    get token() {
+        return this._token!;
+    }
+
+    set token(token: string) {
+        this._token = token;
+    }
 
     get providers(): Map<string, any> {
         return this._providers;
@@ -22,14 +31,6 @@ export class Module {
 
     get metatype() {
         return this.module;
-    }
-
-    get token() {
-        return this._token!;
-    }
-
-    set token(token: string) {
-        this._token = token;
     }
 
     public addProvider(provider: any) {

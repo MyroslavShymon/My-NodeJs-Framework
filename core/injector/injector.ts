@@ -1,6 +1,6 @@
-import { Module } from "./module";
-import { InstanceWrapper } from './instance-wrapper';
-import { Type } from '../../common';
+import {Module} from "./module";
+import {InstanceWrapper} from './instance-wrapper';
+import {Type} from '../../common';
 
 export class Injector {
 
@@ -9,7 +9,7 @@ export class Injector {
         collection: Map<string, InstanceWrapper>,
         moduleRef: Module,
     ) {
-        const { name } = wrapper;
+        const {name} = wrapper;
 
         const targetWrapper = collection.get(name);
         if (!targetWrapper) {
@@ -78,7 +78,7 @@ export class Injector {
         wrapper: InstanceWrapper,
         targetMetatype: InstanceWrapper,
     ): Promise<T> {
-        const { metatype } = wrapper;
+        const {metatype} = wrapper;
 
         targetMetatype.instance = instances
             ? new (metatype as Type<any>)(...instances)

@@ -1,7 +1,7 @@
-// import { Application } from "./application";
 import {Container, InstanceLoader} from "./injector";
-import { DependenciesScanner } from "./dependencies-scanner";
-// import { ExpressAdapter } from '../platform-express/express.adapter';
+import {DependenciesScanner} from "./dependencies-scanner";
+import {ExpressAdapter} from "../platform-express";
+import {Application} from "./application";
 
 export class FactoryStatic {
     public async create(module: any) {

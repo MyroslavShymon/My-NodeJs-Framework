@@ -1,0 +1,1 @@
+export type RequestHandler<TRequest = any, TResponse = any> = (req: TRequest, res: TResponse) => any;

@@ -1,5 +1,5 @@
 import hash from 'object-hash';
-import { v4 as uuid } from 'uuid';
+import {v4 as uuid} from 'uuid';
 import {Type} from "../../common";
 
 export class ModuleTokenFactory {
@@ -11,7 +11,7 @@ export class ModuleTokenFactory {
             id: moduleId,
             module: this.getModuleName(metatype),
         };
-        return hash(opaqueToken, { ignoreUnknown: true });
+        return hash(opaqueToken, {ignoreUnknown: true});
     }
 
     public getModuleId(metatype: Type<unknown>): string {

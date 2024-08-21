@@ -1,10 +1,11 @@
 import 'reflect-metadata';
 import {MODULE_METADATA} from "../common";
-import { Container, Module } from "./injector";
+import {Container, Module} from "./injector";
 
 export class DependenciesScanner {
 
-    constructor(private readonly container: Container) {}
+    constructor(private readonly container: Container) {
+    }
 
     public async scan(module: any) {
         await this.scanForModules(module);
@@ -30,7 +31,7 @@ export class DependenciesScanner {
     public async scanModulesForDependencies() {
         const modules: Map<string, Module> = this.container.getModules();
 
-        for (const [token, { metatype }] of modules) {
+        for (const [token, {metatype}] of modules) {
             await this.reflectAndAddImports(metatype, token);
             this.reflectAndAddProviders(metatype, token);
             this.reflectAndAddControllers(metatype, token);

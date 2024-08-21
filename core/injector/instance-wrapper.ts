@@ -1,4 +1,4 @@
-import { Type } from '../../common';
+import {Type} from '../../common';
 
 export class InstanceWrapper<T = any> {
     public readonly name: string;
