@@ -13,7 +13,6 @@ export class FactoryStatic {
         const instance = new Application(
             container,
             httpServer,
-            applicationConfig,
         );
 
         return instance;

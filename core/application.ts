@@ -1,6 +1,7 @@
 import {Container} from "./injector";
 import {addLeadingSlash, HttpServer} from "../common";
 import {Resolver} from "../common/interfaces/resolver.interface";
+import {RoutesResolver} from "./router";
 
 export class Application {
     public httpServer: any;
