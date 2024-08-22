@@ -92,8 +92,9 @@ export class RouterExplorer {
         };
     }
 
-    public stripEndSlash(str: string) {
-        return str[str.length - 1] === '/' ? str.slice(0, str.length - 1) : str;
+    public normalizePath(str: string): string {
+        const trimmedPath = str[str.length - 1] === '/' ? str.slice(0, -1) : str;
+        return trimmedPath.replace(/\/\//g, '/');
     }
 
     public createCallbackProxy(
@@ -235,8 +236,8 @@ export class RouterExplorer {
         );
 
         paths.forEach(path => {
-            const fullPath = this.stripEndSlash(basePath) + path;
-            routerMethod(this.stripEndSlash(fullPath) || '/', handler);
+            const fullPath = this.normalizePath(basePath) + path;
+            routerMethod(this.normalizePath(fullPath) || '/', handler);
         });
     }
 }

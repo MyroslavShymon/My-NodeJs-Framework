@@ -8,8 +8,20 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
-  "include": ["packages/**/*", "integration/**/*", "./core/", "./common/", "./project-view/", "./platform-express/"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": [
+    "packages/**/*",
+    "integration/**/*",
+    "./core/",
+    "./common/",
+    "./adapters/",
+    "./decorators/",
+    "./project-view/",
+    "./platform-express/"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
 }

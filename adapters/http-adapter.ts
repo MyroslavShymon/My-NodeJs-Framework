@@ -22,6 +22,18 @@ export abstract class AbstractHttpAdapter<
         return this.instance.post(...args);
     }
 
+    public put(...args: any[]) {
+        return this.instance.put(...args);
+    }
+
+    public patch(...args: any[]) {
+        return this.instance.patch(...args);
+    }
+
+    public delete(...args: any[]) {
+        return this.instance.delete(...args);
+    }
+
     public listen(port: any) {
         return this.instance.listen(port);
     }

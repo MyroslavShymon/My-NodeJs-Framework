@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-framework",
+  "name": "my-nodejs-framework",
   "version": "1.0.0",
   "description": "Simple nodejs framework",
   "main": "index.js",

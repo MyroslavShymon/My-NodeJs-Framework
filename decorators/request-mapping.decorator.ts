@@ -39,5 +39,7 @@ const createMappingDecorator = (method: RequestMethod) => (
 };
 
 export const Post = createMappingDecorator(RequestMethod.POST);
-
+export const Put = createMappingDecorator(RequestMethod.PUT);
+export const Delete = createMappingDecorator(RequestMethod.DELETE);
+export const Patch = createMappingDecorator(RequestMethod.PATCH);
 export const Get = createMappingDecorator(RequestMethod.GET);

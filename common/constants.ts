@@ -1,9 +1,9 @@
 export const MODULE_METADATA = {
-    IMPORTS: 'module:imports',
-    PROVIDERS: 'module:providers',
-    CONTROLLERS: 'module:controllers',
-    EXPORTS: 'module:exports',
-    MODULE_PATH: 'module:path'
+    IMPORTS: 'imports',
+    PROVIDERS: 'providers',
+    CONTROLLERS: 'controllers',
+    EXPORTS: 'exports',
+    MODULE_PATH: 'path'
 };
 
 export const PATH_METADATA = Symbol('path_metadata');

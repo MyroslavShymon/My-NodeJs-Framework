@@ -7,6 +7,12 @@ export class RouterMethodFactory {
                 return target.post;
             case RequestMethod.GET:
                 return target.get;
+            case RequestMethod.PUT:
+                return target.put;
+            case RequestMethod.PATCH:
+                return target.patch;
+            case RequestMethod.DELETE:
+                return target.delete;
             default:
                 return target.get;
         }

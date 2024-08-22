@@ -7,6 +7,18 @@ export interface HttpServer<TRequest = any, TResponse = any> {
 
     get(path: string, handler: RequestHandler<TRequest, TResponse>): any;
 
+    put(handler: RequestHandler<TRequest, TResponse>): any;
+
+    put(path: string, handler: RequestHandler<TRequest, TResponse>): any;
+
+    patch(handler: RequestHandler<TRequest, TResponse>): any;
+
+    patch(path: string, handler: RequestHandler<TRequest, TResponse>): any;
+
+    delete(handler: RequestHandler<TRequest, TResponse>): any;
+
+    delete(path: string, handler: RequestHandler<TRequest, TResponse>): any;
+
     post(handler: RequestHandler<TRequest, TResponse>): any;
 
     post(path: string, handler: RequestHandler<TRequest, TResponse>): any;
