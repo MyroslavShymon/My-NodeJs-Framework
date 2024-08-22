@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
     "target": "es2017",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "module": "commonjs",
-    "outDir": "./",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -18,7 +20,8 @@
     "./adapters/",
     "./decorators/",
     "./project-view/",
-    "./platform-express/"
+    "./platform-express/",
+    "./index.ts"
   ],
   "exclude": [
     "node_modules",

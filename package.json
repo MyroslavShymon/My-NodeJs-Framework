@@ -1,10 +1,12 @@
 {
   "name": "my-nodejs-framework",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Simple nodejs framework",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc"
   },
   "repository": {
     "type": "git",
@@ -30,5 +32,8 @@
     "@types/express": "^4.17.21",
     "@types/object-hash": "^3.0.6",
     "@types/uuid": "^10.0.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
